@@ -4,10 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    
+    <style>
+        /* Custom Styles */
+        body {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #343a40;
+            padding: 20px;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #f8f9fa;
+        }
+
+        .sidebar ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #495057;
+            border-radius: 5px;
+        }
+
+        .dropdown .submenu {
+            display: none;
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+        /* Right Content Area */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <!-- Sidebar -->
     <div class="sidebar">
         <h2>Cisco Testing</h2>
         <ul>
@@ -27,9 +104,23 @@
             </li>
             <li><a href="support-form.html">Support Form</a></li>
             <li><a href="test-accessories.html">Test Accessories</a></li>
-
-         
         </ul>
     </div>
+
+    <!-- Right Content Area -->
+    <div class="content">
+        <div class="about-section">
+            <h2>About Cisco Testing</h2>
+            <p>
+                Cisco Testing ensures that all hardware and software meet industry standards before deployment.
+                This includes **hardware validation**, **network security testing**, **performance analysis**, 
+                and **failure diagnostics** to maintain reliability.
+            </p>
+            <button class="btn btn-primary">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
