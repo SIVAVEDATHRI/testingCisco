@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>About Cisco Testing</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     
     <style>
-        /* Custom Styles */
-        body {
-            display: flex;
-            min-height: 100vh;
-        }
-
+        /* Sidebar Styling */
         .sidebar {
             width: 250px;
             background: #343a40;
             padding: 20px;
             color: white;
             min-height: 100vh;
+            position: fixed;
         }
 
         .sidebar h2 {
@@ -38,7 +33,6 @@
 
         .sidebar ul li {
             padding: 10px;
-            text-align: left;
         }
 
         .sidebar ul li a {
@@ -63,14 +57,11 @@
             display: block;
         }
 
-        /* Right Content Area */
+        /* Responsive Content Area */
         .content {
-            flex-grow: 1;
+            margin-left: 260px;
             padding: 20px;
             background: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .about-section {
@@ -78,8 +69,23 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 800px;
+            margin: auto;
             text-align: center;
+        }
+
+        /* Mobile Friendly */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+                min-height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                padding-top: 20px;
+            }
         }
     </style>
 </head>
@@ -109,14 +115,26 @@
 
     <!-- Right Content Area -->
     <div class="content">
-        <div class="about-section">
-            <h2>About Cisco Testing</h2>
-            <p>
-                Cisco Testing ensures that all hardware and software meet industry standards before deployment.
-                This includes **hardware validation**, **network security testing**, **performance analysis**, 
-                and **failure diagnostics** to maintain reliability.
-            </p>
-            <button class="btn btn-primary">Learn More</button>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="about-section">
+                        <h2>About Cisco Testing</h2>
+                        <p class="text-muted">
+                            Cisco Testing ensures that all hardware and software meet industry standards before deployment.
+                            It includes hardware validation, network security testing, performance analysis, 
+                            and failure diagnostics to maintain reliability.
+                        </p>
+                        <ul class="list-group text-start">
+                            <li class="list-group-item">Hardware Testing - Ensures durability and performance.</li>
+                            <li class="list-group-item">Software Testing - Verifies security and network stability.</li>
+                            <li class="list-group-item">Compliance Checks - Meets industry regulations.</li>
+                            <li class="list-group-item">Automated Testing - Improves efficiency and accuracy.</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">Learn More</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
